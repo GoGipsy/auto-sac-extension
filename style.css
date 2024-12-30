@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  width: 320px; /* Largura maior */
+  height: auto;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* Alterado de roxo para azul */
+.bg-indigo-600 {
+  background-color: #2563eb;
+}
+
+.hover\:bg-indigo-700:hover {
+  background-color: #1d4ed8;
+}
+
+.text-white {
+  color: white;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.result .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f3f4f6;
+  border-radius: 0.375rem;
+}
+
+/* Estilo para diferenciar o nome do campo e o valor */
+.result .item .text-content {
+  flex: 1;
+  margin-right: 0.5rem; /* Espaço entre o texto e o botão copiar */
+  word-break: break-word; /* Permite que o texto quebre a linha */
+}
+
+.result .item .field-name {
+  color: #6b7280; /* Cor mais suave para o nome do campo */
+  font-weight: 500;
+}
+
+.result .item .field-value {
+  color: #1f2937; /* Cor mais escura para o valor */
+  font-weight: 700;
+}
+
+.result .item button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  white-space: nowrap; /* Evita que o botão quebre linha */
+}
+
+.result .item button:hover {
+  background: #1d4ed8;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.button-group button:last-child {
+  margin-right: 0; /* Remove o último espaço à direita */
+}
+
+/* Estilos para o overlay de carregamento com desfoque */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px); /* Desfoque do fundo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Animação do spinner */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #2563eb;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Texto do carregamento */
+.loading-overlay p {
+  color: #374151;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+/* Estilos para o link de deslogar no canto superior direito */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.logout-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: color 0.2s;
+}
+
+.logout-link:hover {
+  color: #1d4ed8;
+}

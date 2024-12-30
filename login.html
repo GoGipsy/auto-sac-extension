@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Acesso ao Sistema</title>
+  <style>
+    /* Fonte e reset de estilo */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Estilos gerais */
+    body {
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffffff;
+      height: 100vh;
+      padding: 1rem;
+      width: 100vw;
+      margin: 0;
+    }
+    
+    /* Container de login */
+    .login-container {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    /* Título */
+    h2 {
+      color: #374151;
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Campos de entrada */
+    .input-field {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #374151;
+      background-color: #f9fafb;
+      margin-top: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #2563eb;
+      background-color: #ffffff;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+
+    /* Estilo do botão de login */
+    .login-button {
+      width: 100%;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+
+    .login-button:hover {
+      background-color: #1d4ed8;
+    }
+
+    .login-button:active {
+      background-color: #1e40af;
+    }
+
+    /* Mensagem de erro */
+    #loginResult {
+      font-size: 0.875rem;
+      color: #dc2626;
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    /* Estilos para rótulos e espaçamentos */
+    .text-sm {
+      font-size: 0.875rem;
+      color: #4b5563;
+      margin-bottom: 0.25rem;
+      display: block;
+      font-weight: 500;
+    }
+
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Estilos para o overlay de carregamento com desfoque */
+    .loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(5px); /* Desfoque do fundo */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    /* Animação do spinner */
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(0, 0, 0, 0.1);
+      border-top: 5px solid #2563eb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Texto do carregamento */
+    .loading-overlay p {
+      color: #374151;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Acesso ao Sistema</h2>
+    <div class="mb-4">
+      <label for="username" class="text-sm">Nome de Usuário</label>
+      <input type="text" id="username" placeholder="Digite seu usuário" class="input-field" required>
+    </div>
+    <div class="mb-6">
+      <label for="password" class="text-sm">Senha</label>
+      <input type="password" id="password" placeholder="Digite sua senha" class="input-field" required>
+    </div>
+    <button id="loginBtn" class="login-button">Entrar</button>
+    <p id="loginResult" class="text-center"></p>
+  </div>
+
+  <!-- Overlay de carregamento -->
+  <div id="loading" class="loading-overlay" style="display: none;">
+    <div class="spinner"></div>
+    <p>Carregando...</p>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
