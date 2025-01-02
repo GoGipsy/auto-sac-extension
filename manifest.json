@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Busca dados por Localizador",
+  "name": "Auto Sac Localizador",
   "version": "1.0",
   "description": "Extensão para buscar dados do bilhete através do localizador",
   "action": {

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (result.apiResults) {
       renderResults(result.apiResults);
-      preencherCamposNaPagina(result.apiResults); // Preenche os campos ao abrir, se já houver dados
+      preencherCamposNaPagina(result.apiResults); 
     }
 
     document.getElementById("logoutBtn").addEventListener("click", (event) => {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("buscarBtn").addEventListener("click", async () => {
-      const localizador = document.getElementById("localizador").value.trim();
+      let localizador = document.getElementById("localizador").value.trim().toUpperCase();
 
       if (!localizador) {
         document.getElementById("result").innerHTML = `<p class="text-sm text-red-500">Por favor, insira um localizador válido.</p>`;
