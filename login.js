@@ -15,10 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const response = await fetch('https://sac-api.gbtech.com.br/api/login', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'b94bcc16-b78a-48d4-b31d-bdb809929f58'
+        },
         body: JSON.stringify({ username, password })
       });
-      
+    
       if (!response.ok) {
         const errorDetails = await response.text();
         throw new Error(`Erro de login: ${response.statusText} - Detalhes: ${errorDetails}`);

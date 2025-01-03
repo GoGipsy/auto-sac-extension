@@ -49,7 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
       try {
         const response = await fetch(`https://sac-api.gbtech.com.br/api/localizador/${localizador}`, {
           method: 'GET',
-          headers: { 'Content-Type': 'application/json' }
+          headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': 'b94bcc16-b78a-48d4-b31d-bdb809929f58'
+          }
         });
 
         if (!response.ok) throw new Error(`Erro na resposta da API: ${response.status} - ${response.statusText}`);
