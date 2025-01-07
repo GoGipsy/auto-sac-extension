@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const campos = [
         { label: "Localizador", value: viagem.ID },
+        { label: "Passageiro", value: viagem.Passenger },
+        { label: "RG", value: viagem.Rg },
+        { label: "CPF", value: viagem.Cpf },
         { label: "Origem", value: viagem.Origin },
         { label: "Destino", value: viagem.Destination },
         { label: "Data/Hora da Viagem", value: formatarDataHora(viagem.DepartureDate, viagem.DepartureTime) },
@@ -161,12 +164,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function formatarDataHora(data, hora) {
+    
       if (data && hora) {
-        const dataObj = new Date(data);
-        const horaObj = new Date(hora);
-        return `${dataObj.toLocaleDateString()} ${horaObj.toLocaleTimeString()}`;
+        const [ano, mes, dia] = data.split('T')[0].split('-');
+    
+        const [horas, minutos] = hora.split('T')[1].split(':');
+    
+        const resultado = `${dia}/${mes}/${ano} ${horas}:${minutos}`;
+        return resultado;
       }
+    
       return "N/A";
     }
+    
   });
 });
