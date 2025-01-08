@@ -16,5 +16,6 @@
   ],
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "update_url": "https://seusite.com/extensao/updates.xml"
 }
