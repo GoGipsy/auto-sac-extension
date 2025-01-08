@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.getElementById("loading").style.display = "flex"; 
+    console.log("Minha extensão foi atualizada para versão 1.1!");
 
     try {
       const response = await fetch('https://sac-api.gbtech.com.br/api/login', {
