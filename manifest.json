@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Auto Sac Localizador",
-  "version": "1.1",
+  "name": "Auto Sac Localizador Teste",
+  "version": "1.2",
   "description": "Extensão para buscar dados do bilhete através do localizador",
   "action": {
     "default_popup": "popup.html",
