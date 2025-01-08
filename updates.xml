@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gupdate xmlns="http://www.google.com/update2/response" protocol="2.0">
   <app appid="aibipeklpdejmmnbpmegfpoffnmokmdi">
-    <updatecheck codebase="https://gogipsy.github.io/auto-sac-extension/auto-sac-extension-main.zip" version="1.2" />
+    <updatecheck codebase="https://gogipsy.github.io/auto-sac-extension/auto-sac-extension-main.zip" version="1.4" />
   </app>
 </gupdate>
